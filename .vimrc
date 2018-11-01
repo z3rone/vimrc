@@ -21,3 +21,7 @@ nmap <A-S-Up> :sp
 nmap <A-Up> :vsp 
 au BufEnter,BufNew *.tex map <F5> :w<enter>:!pdflatex %<CR>
 "set mouse=a
+" Keep tabs in empty lines
+inoremap <CR> <CR>x<BS>
+nnoremap o ox<BS>
+nnoremap O Ox<BS>
