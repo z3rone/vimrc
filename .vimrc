@@ -25,3 +25,6 @@ au BufEnter,BufNew *.tex map <F5> :w<enter>:!pdflatex %<CR>
 inoremap <CR> <CR>x<BS>
 nnoremap o ox<BS>
 nnoremap O Ox<BS>
+" Unmap some keys
+nmap <silent> . <Nop>
+nmap <silent> q <Nop>
