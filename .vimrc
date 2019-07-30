@@ -1,3 +1,9 @@
+if filereadable("/etc/vim/vimrc.local")
+  source /etc/vim/vimrc.local
+endif
+
+runtime! debian.vim
+
 set autoindent
 set number
 set tabstop=4
@@ -19,12 +25,14 @@ nmap <silent> <A-C-U> :resize +1<CR>
 nmap <silent> <A-C-D> :resize -1<CR>
 nmap <A-S-Up> :sp 
 nmap <A-Up> :vsp 
-au BufEnter,BufNew *.tex map <F5> :w<enter>:!pdflatex %<CR>
 "set mouse=a
+set mouse=
+
 " Keep tabs in empty lines
 inoremap <CR> <CR>x<BS>
 nnoremap o ox<BS>
 nnoremap O Ox<BS>
+
 " Unmap some keys
 nmap <silent> . <Nop>
 nmap <silent> q <Nop>
