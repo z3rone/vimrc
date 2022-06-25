@@ -4,6 +4,7 @@ endif
 
 runtime! debian.vim
 
+syntax on
 set autoindent
 set number
 set tabstop=4
